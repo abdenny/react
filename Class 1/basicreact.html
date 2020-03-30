@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel" src="./Name.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // let corona = 'Corona virus ppe in new york';
+      // let isMarkup = true;
+
+      // const markup = (
+      //   <div className='row'>
+      //     <div className='col s2'>
+      //       <div className='card hoverable small'>
+      //         <div className='card-image'>
+      //           <img src='http://lorempixel.com/400/400/nature/' />
+      //         </div>
+      //         <div className='card-content'>
+      //           <p>{corona}</p>
+      //           <p>N95 Masks</p>
+      //         </div>
+      //         <div className='card-action'>
+      //           <a href='#'>$9.99</a>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </div>
+      // );
+      let test = (
+        <div>
+          <Name />
+          <Name />
+          <Name />
+          <Name />
+          <Name />
+          <Name />
+        </div>
+      );
+      ReactDOM.render(test, document.getElementById('root'));
+    </script>
+  </body>
+</html>
