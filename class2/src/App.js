@@ -4,7 +4,8 @@ import Parent2 from './components/exercise2/Parent';
 import SimpleList from './components/SimpleList';
 import SimpleDropdown from './components/SimpleDropdown';
 import { Container, Row, Col } from 'react-bootstrap';
-import moduleName from './components/Drop';
+// import moduleName from './components/Drop';
+import Calculator from './components/calculator/Calculator';
 
 let daysOfWeek = [
   'Monday',
@@ -26,7 +27,8 @@ class App extends Component {
             {/* 
         <Parent2 />
         <SimpleList /> */}
-            <SimpleDropdown days={daysOfWeek} />
+            {/* <SimpleDropdown days={daysOfWeek} /> */}
+            <Calculator />
           </Col>
         </Row>
       </Container>
