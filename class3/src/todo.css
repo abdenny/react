@@ -1,0 +1,42 @@
+body {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.List {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  background-color: cornflowerblue;
+  width: 500px;
+}
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
+  width: 500px;
+  height: 100px;
+  background-color: darkcyan;
+}
+.Pending {
+  width: 500px;
+  height: 300px;
+  background-color: darkgray;
+}
+.Complete {
+  width: 500px;
+  height: 300px;
+  background-color: darkkhaki;
+}
+.addButton {
+  width: 75px;
+  height: 30px;
+  margin-left: 15px;
+  background-color: darksalmon;
+}

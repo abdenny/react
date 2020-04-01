@@ -6,6 +6,7 @@ import SimpleDropdown from './components/SimpleDropdown';
 import { Container, Row, Col } from 'react-bootstrap';
 // import moduleName from './components/Drop';
 import Calculator from './components/calculator/Calculator';
+import Comments from './components/comments/Comments';
 
 let daysOfWeek = [
   'Monday',
@@ -20,18 +21,9 @@ let daysOfWeek = [
 class App extends Component {
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col md={{ span: 4, offset: 4 }}>
-            {/* <Parent /> */}
-            {/* 
-        <Parent2 />
-        <SimpleList /> */}
-            {/* <SimpleDropdown days={daysOfWeek} /> */}
-            <Calculator />
-          </Col>
-        </Row>
-      </Container>
+      <>
+        <Comments />
+      </>
     );
   }
 }
