@@ -6,7 +6,8 @@ class Todo extends Component {
 
     this.state = {
       task: '',
-      tasks: []
+      tasks: [],
+      completedTask: ''
     };
   }
   addNewTask = e => {
@@ -16,14 +17,27 @@ class Todo extends Component {
   };
 
   submitNewTask = e => {
-    console.log(this.state.task);
     this.setState({
-      tasks: [...this.state.tasks, this.state.task]
+      tasks: this.state.tasks.concat([this.state.task])
     });
-    console.log(this.state.tasks);
+  };
+
+  completeTask = e => {
+    console.log('hi');
+    this.setState({
+      completedTask: e.target.previousSibling.wholeText
+    });
   };
 
   render() {
+    let pendingItems = this.state.tasks.map((item, index) => {
+      return (
+        <li key={index}>
+          {item} <button onClick={this.completeTask}>Mark as Complete</button>
+        </li>
+      );
+    });
+
     return (
       <>
         <div className='List'>
@@ -35,17 +49,15 @@ class Todo extends Component {
           </div>
           <div className='Pending'>
             <h4>Pending Items</h4>
-            <ul>
-              <li>
-                {this.state.taskBeingAdded} <button>Mark as Complete</button>
-              </li>
-            </ul>
+            <ul>{pendingItems}</ul>
           </div>
           <div className='Complete'>
             <h4>Complete Items</h4>
+
             <ul>
               <li>
-                Text <button>Mark as Incomplete</button>
+                text
+                <button>Mark as Incomplete</button>
               </li>
             </ul>
           </div>
