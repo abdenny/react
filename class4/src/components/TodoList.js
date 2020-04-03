@@ -5,15 +5,12 @@ class TodoList extends Component {
     super(props);
     this.state = {
       tasks: [],
-      inputTxt: ''
+      inputTxt: '',
     };
   }
-  handleInput = e => {
-    //e.target.value
-    //DON"T DO THIS
-    // this.state.input = e.target.value
+  handleInput = (e) => {
     this.setState({
-      inputTxt: e.target.value
+      inputTxt: e.target.value,
     });
   };
   addTaskItem = () => {
@@ -26,19 +23,14 @@ class TodoList extends Component {
     this.setState(
       {
         tasks: tasks,
-        inputTxt: ''
+        inputTxt: '',
       },
       () => {
         console.log(this.state.tasks);
       }
     );
-    // console.log(this.state.tasks);
-    // this.setState({}, ()=>{
-    // })
   };
   render() {
-    // let {tasks, inputTxt} = this.state;
-    //["","", ""]
     let taskList = this.state.tasks.map((task, index) => {
       return <li key={index}>{task}</li>;
     });
