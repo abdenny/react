@@ -72,7 +72,7 @@ const App = () => {
           <Todo
             completeTodo={completeTodo}
             key={index}
-            indec={index}
+            index={index}
             todo={todo}
           />
         ))}
